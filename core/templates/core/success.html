@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+
+{% block body %}
+
+<head>
+    <style>
+        .center {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div class="row justify-content-center">
+            <img src="https://th.bing.com/th/id/OIP.rIbRe5OJS-oyNWc-aYSwjgHaG1?pid=ImgDet&w=512&h=473&rs=1"
+                style="height: 200px;" alt="">
+        </div>
+        <h3>
+            Thanks, You are aweseome! <i class="fas fa-check-circle"></i>
+        </h3>
+        <h5>
+            <a href="{% url 'home' %}">
+                Again?
+            </a>
+        </h5>
+    </div> 
+</body>
+
+{% endblock body %}

@@ -1,0 +1,18 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+SignUp
+{% endblock title %}
+
+{% block body %}
+<div class="container my-3">
+        <h3 class="text-center bg-info">Sign Up Form</h3>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for fm in form %}
+                {{fm.label_tag}}  {{fm}} {{fm.errors|striptags}} <br><br>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+{% endblock body %}

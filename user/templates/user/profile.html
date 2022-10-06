@@ -1,0 +1,24 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Profile
+{% endblock title %}
+
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center">User Profile</h1>
+        <div class="card" style="width: 18rem;">
+            {% for user in users %}
+            <img src="{{ user.image }}" alt="">
+            <div class="card-body">
+                <h5 class="card-title">Name : {{user.fname}} {{user.lname}}</h5>
+                <p class="card-text">Phone : {{user.phone}}</p>
+                <p class="card-text">Email : {{user.email}}</p>
+                <p class="card-text">Address : {{user.address}}</p>
+                <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}
